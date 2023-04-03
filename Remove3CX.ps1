@@ -1,3 +1,10 @@
+#
+# Removes 3CX and writes to event log
+#
+
+#Set execution policy
+Set-ExecutionPolicy Unrestricted
+
 #Create new event log source for 3CX
 $checklogfile = Get-EventLog -Source "3CX Removal" -LogName Application
 if (! $checklogfile){
